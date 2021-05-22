@@ -37,4 +37,13 @@ export const IMAGE = {
   USERLIST: require('../images/userList.png'),
   HEART: require('../images/heart.png'),
   FILLHEART: require('../images/fillHeart.png'),
+  ATTACHMENT: require('../images/attachment.png'),
+  DUSTBIN: require('../images/dustbin.png'),
+  GDRIVE: require('../images/google-drive.png'),
+  HAPPY: require('../images/happy.png'),
+  LINK: require('../images/link.png'),
+  LOCK: require('../images/padlock.png'),
+  PEN: require('../images/pen.png'),
+  PHOTO: require('../images/photo.png'),
+  TEXT: require('../images/text.png'),
 };

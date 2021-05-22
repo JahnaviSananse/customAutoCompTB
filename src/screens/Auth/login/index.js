@@ -39,23 +39,95 @@ const Login = () => {
 
   return (
     <>
-      <View style={styles.container}>
-        <Image style={styles.stretch} source={IMAGE.GIRL} />
-      </View>
-      <TextField
-        value={email}
-        placeholder={STRING.ENTER_EMAIL}
-        title={STRING.EMAIL}
-        change={text => searchEmail(text)}
-      />
+      <View
+        style={{
+          backgroundColor: 'white',
+          width: '95%',
+          alignSelf: 'center',
+          borderRadius: 10,
+          justifyContent: 'center',
+          marginTop: '10%',
+        }}>
+        <View
+          style={{
+            backgroundColor: 'grey',
+            borderTopLeftRadius: 10,
+            borderTopRightRadius: 10,
+          }}>
+          <Text style={{fontSize: 18}}> New Message</Text>
+        </View>
 
-      {open ? (
-        <FlatList
-          data={query}
-          renderItem={renderData}
-          keyExtractor={item => item.id}
+        <TextField
+          value={email}
+          title={STRING.TO}
+          placeholder={STRING.SUBJECT}
+          change={text => searchEmail(text)}
         />
-      ) : null}
+        <View
+          style={{
+            borderBottomWidth: 0.5,
+            borderBottomColor: 'grey',
+            width: '95%',
+            left: 7,
+          }}
+        />
+        {open ? (
+          <FlatList
+            data={query}
+            renderItem={renderData}
+            keyExtractor={item => item.id}
+          />
+        ) : null}
+        <View
+          style={{
+            flexDirection: 'row',
+            marginLeft: '85%',
+            bottom: '7%',
+            // backgroundColor: 'yellow',
+          }}>
+          <Text> Cc</Text>
+          <Text> Bcc</Text>
+        </View>
+        <TextField placeholder={STRING.SUBJECT} />
+        <View
+          style={{
+            borderBottomWidth: 0.5,
+            borderBottomColor: 'grey',
+            width: '95%',
+            left: 7,
+          }}
+        />
+
+        <View
+          style={{
+            width: 350,
+            height: 250,
+            backgroundColor: 'white',
+            alignSelf: 'center',
+          }}
+        />
+        <View
+          style={{
+            width: 380,
+            height: 70,
+            // backgroundColor: 'red',
+            alignSelf: 'center',
+            flexDirection: 'row',
+          }}>
+          <Text style={{top: 22}}>Send</Text>
+          <Image style={styles.stretch} source={IMAGE.TEXT} />
+          <Image style={styles.stretch} source={IMAGE.ATTACHMENT} />
+          <Image style={styles.stretch} source={IMAGE.LINK} />
+          <Image style={styles.stretch} source={IMAGE.HAPPY} />
+          <Image style={styles.stretch} source={IMAGE.GDRIVE} />
+          <Image style={styles.stretch} source={IMAGE.PHOTO} />
+          <Image style={styles.stretch} source={IMAGE.LOCK} />
+          <Image style={styles.stretch} source={IMAGE.PEN} />
+          <View style={{flexDirection: 'row-reverse', left: 70}}>
+            <Image style={styles.stretch} source={IMAGE.DUSTBIN} />
+          </View>
+        </View>
+      </View>
     </>
   );
 };

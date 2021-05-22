@@ -5,10 +5,11 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   stretch: {
-    width: 70,
-    height: 90,
+    width: 20,
+    height: 20,
     resizeMode: 'stretch',
     alignSelf: 'center',
+    marginHorizontal: 5,
   },
 });
 export default styles;
